@@ -1,7 +1,7 @@
 // test bench for multifunctional circuit
 `timescale 1ns / 1ps
 
-module tb_with_alarm;
+module tb_multi_functional_circuit;
 
 reg 	 	clk,rst,pause,alarm;
 reg 	 	in_hour,in_minute,in_second,de_hour,de_minute,de_second;
@@ -10,7 +10,7 @@ reg[1:0] 	mode;
 wire 		ring,led;
 wire[7:0] 	hour,minute,second;
 
-with_alarm dut(.clk(clk),
+multi_functional_circuit dut(.clk(clk),
                .rst(rst),
                .pause(pause),
                .alarm(alarm),
@@ -63,7 +63,7 @@ initial fork
 	#300 de_minute=1;
 	#330 de_minute=0;      
 	
-    #350 rst=1;
+    	#350 rst=1;
    
    // stimulus for stopwatch ---- change times
    #40 mode=2'd2;
