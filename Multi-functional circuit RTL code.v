@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module with_alarm(
+module multi_functional_circuit(
 		input clk,rst,pause,alarm,                 				// clock, reset and pause switches //
 		input in_hour,in_minute,in_second,de_hour,de_minute,de_second,      	// increment and decrement switches //
 		input [1:0] mode,                     					// mode select switches //
